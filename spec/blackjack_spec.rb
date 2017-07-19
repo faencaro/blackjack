@@ -20,4 +20,14 @@ describe Random do
 	  #Assert
 	  expect(result).to eq 2
 	end
+
+	it "deberia generar dos numeros aleatorios entre 1 y 11 y sumarlos" do
+	  #Arrange
+	  miBlackJack = Blackjack.new	
+	  #Act
+	  result = miBlackJack.partida 2, MyRandomizer.new(7)
+	  #Assert
+	  expect(result).to eq 14
+	end
+
 end

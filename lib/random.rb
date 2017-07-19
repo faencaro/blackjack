@@ -1,6 +1,12 @@
 class Blackjack
 	def initialize 
 		@numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+		@jugadores = [1,2]
+		@nros_aleat = [1,2]
+		@jugadaJ1 = []
+		@jugadaJ2 = []
+		@sumadaJ1 = 0
+		@sumadaJ2 = 0
 	end	
 
 	def nro_aleatorio_j1 randomizer=Random.new
@@ -8,10 +14,22 @@ class Blackjack
 		randomizer.rand (1...largo)
 	end	
 
-	def jugada jugador
-		jugada[jugador, 1] = nro_aleatorio_j1
-		jugada[jugador, 2] = nro_aleatorio_j1
-		suma[jugador] = jugada[jugador, 1] + jugada[jugador, 2] 
+	def partida jugador, randomizer=Random.new
+		if jugador = 1  
+			@jugadaJ1.push nro_aleatorio_j1 randomizer
+			@jugadaJ1.push nro_aleatorio_j1 randomizer
+			@jugadaJ1.each do |dato|
+				@sumadaJ1 =	@sumadaJ1 + dato
+			end
+			return @sumadaJ1
+		else
+			@jugadaJ2.push nro_aleatorio_j1 randomizer
+			@jugadaJ2.push nro_aleatorio_j1 randomizer
+			@jugadaJ2.each do |dato|
+				@sumadaJ2 =	@sumadaJ2 + dato
+			end
+			return @sumadaJ2	
+		end
 	end	
 
 	def nro_aleatorio_maquina randomizer=Random.new
