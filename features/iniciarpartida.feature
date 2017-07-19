@@ -1,16 +1,7 @@
 #features/inicioJuego.feature
 Feature:	
-		como arbitro de tennis quiero configurar los nombres de los jugadores para saber quien esta jugando
+		como jugador de blakjack quiero iniciar el juego Blackie
 
-Scenario: debe aparecer un titulo de bienvenida
+Scenario: debe aparecer el botòn Jugar para iniciar el juego
 	Given abrimos el juego
-	Then se debe ver "Bienvenido al tennis 3.0"
-
-Scenario: 	se debe configurar los nombres de los jugadores
-	Given abrimos el juego
-	When ingrese a "Jules" como "jugador1"
-	And ingrese a "Fabio" como "jugador2"
-	And inicie el juego
-	Then se debe ver "Jules VS Fabio"
-
-
+	Then al hacer clic en Jugar debe generar dos cartas aleatorias
