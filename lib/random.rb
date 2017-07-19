@@ -13,7 +13,7 @@ class Blackjack
 		randomizer.rand (1...largo)
 	end	
 
-	def partida jugador, randomizer=Random.new
+	def partida jugador, randomizer
 		if jugador = 1  
 			@sumadaJ1 =	0
 			@jugadaJ1.push nro_aleatorio_j1 randomizer

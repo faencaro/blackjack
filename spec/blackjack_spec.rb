@@ -25,8 +25,8 @@ describe Random do
 	  #Arrange
 	  miBlackJack = Blackjack.new	
 	  #Act
-	  #result = miBlackJack.partida 2, MyRandomizer.new(8)
-	  result = miBlackJack.partida 2
+	  result = miBlackJack.partida 2, MyRandomizer.new(7)
+	  #result = miBlackJack.partida 2
 	  #Assert
 	  expect(result).to eq 14
 	end
