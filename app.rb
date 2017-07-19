@@ -7,6 +7,8 @@ get '/' do
 end
 
 post '/iniciar' do
-	session["partida"] = Blackjack.new
+	session["blackjack"] = Blackjack.new
+	session["blackjack"].partida(1)
+	session["blackjack"].partida(2)
 	erb(:juegouno)
 end

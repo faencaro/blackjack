@@ -4,7 +4,9 @@
 	<title></title>
 </head>
 <body>
-	<h1>Jugador 1 = <%= session["partida"].nro_aleatorio_j1%> - <%= session["partida"].nro_aleatorio_j1%> Total = <%= session["partida"].sumadaJ1%></h1>
-	<h2>Casa      = <%= session["partida"].nro_aleatorio_j1%> - <%= session["partida"].nro_aleatorio_j1%> Total = <%= session["partida"].sumadaJ2%></h2>
+	<h1>Jugador 1 = <%= session["blackjack"].jugadaJ1[1]%> - <%= session["blackjack"].jugadaJ1[2]%> Total = 
+	<%= session["blackjack"].sumadaJ1%></h1>
+	<h2>Casa      = <%= session["blackjack"].jugadaJ1[2]%> - <%= session["partida"].jugadaJ1[2]%> Total = 
+	<%= session["blackjack"].sumadaJ2%></h2>
 </body>
 </html>

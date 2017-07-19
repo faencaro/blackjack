@@ -1,5 +1,5 @@
 class Blackjack
-	attr_reader :sumadaJ1, :sumadaJ2
+	attr_reader :sumadaJ1, :sumadaJ2, :jugadaJ1, :jugadaJ2
 	def initialize 
 		@numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 		@jugadaJ1 = []
@@ -15,6 +15,7 @@ class Blackjack
 
 	def partida jugador, randomizer=Random.new
 		if jugador = 1  
+			@sumadaJ1 =	0
 			@jugadaJ1.push nro_aleatorio_j1 randomizer
 			@jugadaJ1.push nro_aleatorio_j1 randomizer
 			@jugadaJ1.each do |dato|
@@ -22,6 +23,7 @@ class Blackjack
 			end
 			return @sumadaJ1
 		else
+			@sumadaJ2 =	0
 			@jugadaJ2.push nro_aleatorio_j1 randomizer
 			@jugadaJ2.push nro_aleatorio_j1 randomizer
 			@jugadaJ2.each do |dato|
