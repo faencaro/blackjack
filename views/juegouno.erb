@@ -4,9 +4,11 @@
 	<title></title>
 </head>
 <body>
-	<h1>Jugador 1 = <%= session["blackjack"].jugadaJ1[1]%> - <%= session["blackjack"].jugadaJ1[2]%> Total = 
-	<%= session["blackjack"].sumadaJ1%></h1>
-	<h2>Casa      = <%= session["blackjack"].jugadaJ2[1]%> - <%= session["partida"].jugadaJ2[2]%> Total = 
-	<%= session["blackjack"].sumadaJ2%></h2>
+	<h1>Jugador 1 = (<%= session["blackjack"].jugadaJ1[0]%>) y (<%= session["blackjack"].jugadaJ1[1]%>) Total = 
+	(<%= session["j1"]%>)</h1>
+	<h2>Casa      = (<%= session["blackjack"].jugadaJ2[0]%>) y (<%= session["blackjack"].jugadaJ2[1]%>) Total = 
+	(<%= session["j2"]%>)</h2>
+	<h3></h3>
+	<h4><%= session["ganador"]%></h4>
 </body>
 </html>

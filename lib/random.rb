@@ -13,9 +13,10 @@ class Blackjack
 		randomizer.rand (1...largo)
 	end	
 
-	def partida jugador, randomizer
-		if jugador = 1  
+	def partida jugador, randomizer=Random.new
+		if jugador == 1  
 			@sumadaJ1 =	0
+			@jugadaJ1 = []
 			@jugadaJ1.push nro_aleatorio_j1 randomizer
 			@jugadaJ1.push nro_aleatorio_j1 randomizer
 			@jugadaJ1.each do |dato|
@@ -24,6 +25,7 @@ class Blackjack
 			return @sumadaJ1
 		else
 			@sumadaJ2 =	0
+			@jugadaJ2 = []
 			@jugadaJ2.push nro_aleatorio_j1 randomizer
 			@jugadaJ2.push nro_aleatorio_j1 randomizer
 			@jugadaJ2.each do |dato|
@@ -31,11 +33,15 @@ class Blackjack
 			end
 			return @sumadaJ2	
 		end
-	end	
-
-	def nro_aleatorio_maquina randomizer=Random.new
-		num_aleat = rand(@numero.length)
-		largo = @numero.length
-		 randomizer.rand (1...largo)
 	end		
+
+	def ganador
+		if @sumadaJ1 > @sumadaJ2
+			'Gana el Jugador'
+		elsif @sumadaJ1 < @sumadaJ2
+			'Gana la casa'
+		else
+			'Empate'
+		end
+	end
 end

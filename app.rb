@@ -8,7 +8,8 @@ end
 
 post '/iniciar' do
 	session["blackjack"] = Blackjack.new
-	j1 = session["blackjack"].partida(1)
-	j2 = session["blackjack"].partida(2)
+	session["j1"] = session["blackjack"].partida(1)
+	session["j2"] = session["blackjack"].partida(2)
+	session["ganador"] = session["blackjack"].ganador
 	erb(:juegouno)
 end
