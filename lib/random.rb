@@ -5,7 +5,13 @@ class Blackjack
 
 	def nro_aleatorio_j1 randomizer=Random.new
 		largo = @numero.length
-		 randomizer.rand (1...largo)
+		randomizer.rand (1...largo)
+	end	
+
+	def jugada jugador
+		jugada[jugador, 1] = nro_aleatorio_j1
+		jugada[jugador, 2] = nro_aleatorio_j1
+		suma[jugador] = jugada[jugador, 1] + jugada[jugador, 2] 
 	end	
 
 	def nro_aleatorio_maquina randomizer=Random.new
