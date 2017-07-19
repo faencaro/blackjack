@@ -10,7 +10,7 @@ class Blackjack
 
 	def nro_aleatorio_maquina randomizer=Random.new
 		num_aleat = rand(@numero.length)
-	    #@numero[num_aleat]		
-		#return num_aleat
+		largo = @numero.length
+		 randomizer.rand (1...largo)
 	end		
 end

@@ -7,6 +7,6 @@ get '/' do
 end
 
 post '/iniciar' do
-	session["partida"] = Random.new
+	session["partida"] = Blackjack.new
 	erb(:juegouno)
 end
