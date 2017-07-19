@@ -1,17 +1,16 @@
-class Random
+class Blackjack
 	def initialize 
-		@numero = %w{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 }
+		@numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 	end	
 
-	def nro_aleatorio_j1
-		num_aleat = rand(@numero.length)
-		puts @numero[num_aleat]
-		#return num_aleat
+	def nro_aleatorio_j1 randomizer=Random.new
+		largo = @numero.length
+		 randomizer.rand (1...largo)
 	end	
 
-	def nro_aleatorio_maquina
+	def nro_aleatorio_maquina randomizer=Random.new
 		num_aleat = rand(@numero.length)
-		puts @numero[num_aleat]		
+	    #@numero[num_aleat]		
 		#return num_aleat
 	end		
 end
