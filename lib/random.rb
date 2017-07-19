@@ -1,8 +1,7 @@
 class Blackjack
+	attr_reader :sumadaJ1, :sumadaJ2
 	def initialize 
 		@numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-		@jugadores = [1,2]
-		@nros_aleat = [1,2]
 		@jugadaJ1 = []
 		@jugadaJ2 = []
 		@sumadaJ1 = 0
